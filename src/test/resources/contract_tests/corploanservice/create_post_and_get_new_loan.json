@@ -36,7 +36,25 @@
                     "dateSanctioned":"2018-05-31"
                 }
             }
+        },
+        {
+            "name": "get_loan_details_without_hard_coding",
+            "url": "/api/v1/corp-loan/ids/${$.create_approved_loan.response.body.id}",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body":{
+                    "id" : "${$.create_approved_loan.response.body.id}",
+                    "currency": "${$.create_approved_loan.request.body.currency}",
+                    "dateSanctioned":"${$.create_approved_loan.request.body.dateSanctioned}",
+                    "amountApplied": "$EQ.${$.create_approved_loan.request.body.amountApplied}",
+                    "amountSanctioned": "$EQ.${$.create_approved_loan.request.body.amountSanctioned}"
+                }
+            }
         }
+
 
     ]
 }
