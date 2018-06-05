@@ -13,8 +13,13 @@ org...tests.idchecksslservice.IdCheckServiceContractTest
 org...tests.regulatoryservice.RegulatoryServiceContractTest
 org...tests.screeningservice.ScreeningServiceContractTest
 ```
+That's it. Done.
+===
 
-+ See also contract tests without any hardcoded value, the test-steps has been chained from earlier `request/response`:
+See also:
+===
+
++ See also how the contract tests are written without any hardcoded value, the test-steps has been chained from earlier `request/response`:
 ```java
 @TargetEnv("corploan_server_host.properties")
 @UseHttpClient(SslTrustHttpClient.class)
@@ -30,8 +35,9 @@ public class CorpLoanServiceContractTest {
 }
 
 ```
- and the test:
+ and the test-step:
 ```javaScript
+...
         {
             "name": "get_loan_details_without_hard_coding",
             "url": "/api/v1/corp-loan/ids/${$.create_approved_loan.response.body.id}",
@@ -96,7 +102,7 @@ public class ContractTestSuite {
 
 + Tu run locally:
   + Please make sure you have started the `RunMeFirstMockApiServer.java`
-  + The run 
+  + To run 
   ```
   mvn clean install   -or    mvn clean test
   ```
