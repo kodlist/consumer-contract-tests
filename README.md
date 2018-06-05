@@ -62,3 +62,41 @@ restful.application.endpoint.port=8088
 restful.application.endpoint.context=
 
 ```
+
++ How to trigger the tests in CI build ?
+Set up sure-fire plugin as below:
+
+```xml
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<includes>
+						<include>org.jsmart.zerocode.testhelp.tests.ContractTestSuite.class</include>
+					</includes>
+				</configuration>
+			</plugin>
+```
+This will trigger the suite test i.e. `ContractTestSuite.java` which in turn will run all the tests.
+
++ ContractTestSuite is configured like below:
+```java
+@Suite.SuiteClasses({
+        RegulatoryServiceContractTest.class,
+        IdCheckServiceContractTest.class,
+        CorpLoanServiceContractTest.class,
+        ScreeningServiceContractTest.class
+})
+@RunWith(Suite.class)
+public class ContractTestSuite {
+
+}
+```
+
++ Tu run locally:
+  + Please make sure you have started the `RunMeFirstMockApiServer.java`
+  + The run 
+  ```
+  mvn clean install   -or    mvn clean test
+  ```
