@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.jsmart</groupId>
-	<artifactId>abc-bank-consumer-contract-tests</artifactId>
+	<artifactId>corp-bank-consumer-contract-tests</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<packaging>jar</packaging>
@@ -33,6 +33,11 @@
 			<artifactId>zerocode-rest-bdd</artifactId>
 			<version>${zerocode-rest-bdd.version}</version>
 		</dependency>
+		<!--
+		The below is needed only for fake REST end point simulation.
+		You may not need it for real REST services as they will be
+		already deployed and running in your CI/DIT/SIT server.
+		-->
 		<dependency>
 			<groupId>org.jsmart</groupId>
 			<artifactId>micro-simulator</artifactId>
