@@ -1,22 +1,32 @@
 # consumer-contract-tests
-Sample Consumer Contract Tests - Banking
+Sample Consumer Contract Tests - Corp Bank
 
-+ To run all the tests, use:
+![Sample Tests](img/contract_tests_org.png)
+
++ To build the project use maven command below:
+```
+mvn clean install -DskipTests
+```
+
++ To run all the contract tests, run the `TestSuite`:
 ```java
 org.jsmart.zerocode.testhelp.tests.ContractTestSuite
 ```
 
-+ To run a particular contract test, use:
++ To run any particular contract test, run one of :
 ```java
 org...tests.corploanservice.CorpLoanServiceContractTest
+
 org...tests.idchecksslservice.IdCheckServiceContractTest
+
 org...tests.regulatoryservice.RegulatoryServiceContractTest
+
 org...tests.screeningservice.ScreeningServiceContractTest
 ```
 That's it. Done.
 ===
 
-See also:
+_See also:_
 ===
 
 + See also how the contract tests are written without any hardcoded value, the test-steps has been chained from earlier `request/response`:
