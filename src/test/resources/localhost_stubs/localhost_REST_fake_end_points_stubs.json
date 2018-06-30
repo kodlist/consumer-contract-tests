@@ -2,6 +2,36 @@
     "name": "Stub aka Mock - Localhost REST Endpoints - GET POST PUT APIs",
     "apis": [
         {
+            "name": "get_book_vwith_basic_auth",
+            "operation": "GET",
+            "url": "/api/v1/white-papers/WP-001",
+            "headers": {
+                "Authorization": "Basic YWRtaW46cGFzc3dvcmQ="
+            },
+            "response": {
+                "status": 200,
+                "body": {
+                    "id": "WP-001",
+                    "type": "pdf",
+                    "category": "Mule System API"
+                }
+            }
+        },
+        {
+            "name": "get_book_with_wrong_basic_auth",
+            "operation": "GET",
+            "url": "/api/v1/white-papers/WP-002",
+            "headers": {
+                "Authorization": "Basic WrongUSER-PASSWD"
+            },
+            "response": {
+                "status": 401,
+                "body": {
+                   "message": "Unauthorized"
+                }
+            }
+        },
+        {
             "name": "get_regulatory_entry_details_mock",
             "operation": "GET",
             "url": "/api/v1/regulatory/bank-ids/CORPBANKUK0101",

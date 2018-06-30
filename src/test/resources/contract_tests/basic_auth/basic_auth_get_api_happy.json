@@ -1,0 +1,21 @@
+{
+    "scenarioName": "Basic auth with correct user and password will succeed",
+    "steps": [
+        {
+            "name": "get_screening_details",
+            "url": "/api/v1/white-papers/WP-001",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "id": "WP-001",
+                    "type": "pdf",
+                    "category": "Mule System API"
+                }
+            }
+        }
+
+    ]
+}

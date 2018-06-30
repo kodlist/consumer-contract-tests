@@ -1,0 +1,21 @@
+{
+    "scenarioName": "Basic auth with Wrong user and password will error",
+    "steps": [
+        {
+            "name": "get_screening_details",
+            "url": "/api/v1/white-papers/WP-002",
+            "operation": "GET",
+            "request": {
+                "headers":{
+                    "Authorization": "Basic WrongUSER-PASSWD"
+                }
+            },
+            "assertions": {
+                "status": 401,
+                "body" : {
+                    "message" : "Unauthorized"
+                }
+            }
+        }
+    ]
+}
