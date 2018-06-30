@@ -8,6 +8,15 @@ import org.jsmart.zerocode.httpclient.CorpBankApcheHttpClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+/**
+ *
+ *
+ * Note-
+ * Before running any tests-
+ * Please make sure you have run the RunMeFirstMockApiServer.java which acts like a REST web server.
+ *
+ *
+ */
 @TargetEnv("basicauth_server_host.properties")
 @UseHttpClient(CorpBankApcheHttpClient.class)
 @RunWith(ZeroCodeUnitRunner.class)
