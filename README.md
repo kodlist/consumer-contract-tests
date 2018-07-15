@@ -1,4 +1,4 @@
-# consumer-contract-tests
+# Contract tests for interfacing APIs aka Consumer Contract Tests
 Sample Consumer Contract Tests - Corp Bank
 
 ![Sample Tests](img/contract_tests_org.png)
