@@ -8,6 +8,11 @@ import org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+/**
+ *   + Please make sure you have started the `RunMeFirstMockApiServer.java`
+ *   + which acts like a fake RESTful server running at localhost exposing the
+ *   + API end points used in these examples.
+ */
 @TargetEnv("identity_service_host.properties")
 @UseHttpClient(SslTrustHttpClient.class)
 @RunWith(ZeroCodeUnitRunner.class)

@@ -26,6 +26,9 @@ org...tests.screeningservice.ScreeningServiceContractTest
 That's it. Done.
 ===
 
++ Note -
+  Please make sure you have started the `RunMeFirstMockApiServer.java`, which acts like a fake RESTful server running at localhost exposing the API end points used in these examples.
+
 _See also:_
 ===
 
@@ -116,3 +119,5 @@ public class ContractTestSuite {
   ```
   mvn clean install   -or    mvn clean test
   ```
+
+  

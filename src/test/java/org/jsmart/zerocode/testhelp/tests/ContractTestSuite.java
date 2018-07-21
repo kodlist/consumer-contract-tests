@@ -7,6 +7,11 @@ import org.jsmart.zerocode.testhelp.tests.screeningservice.ScreeningServiceContr
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
+/**
+ *   + Please make sure you have started the `RunMeFirstMockApiServer.java`
+ *   + which acts like a fake RESTful server running at localhost exposing the
+ *   + API end points used in these examples.
+ */
 @Suite.SuiteClasses({
         RegulatoryServiceContractTest.class,
         IdCheckServiceContractTest.class,
