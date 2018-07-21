@@ -111,6 +111,27 @@
                     "globalScreeningStatus" : "Red"
                 }
             }
+        },
+        {
+            "name": "get_all_hv_persons",
+            "operation": "GET",
+            "url": "/api/v1/screening/persons",
+            "response": {
+                "status": 200,
+                "body": {
+                    "type" : "HIGH-VALUE",
+                    "persons":[
+                        {
+                            "id": "120.100.80.03",
+                            "name": "Dan"
+                        },
+                        {
+                            "id": "120.100.80.11",
+                            "name": "Mike"
+                        }
+                    ]
+                }
+            }
         }
 
     ]

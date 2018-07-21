@@ -1,0 +1,45 @@
+{
+    "scenarioName": "Screening Contract- Find an element in the persons array",
+    "steps": [
+        {
+            "name": "get_screening_details",
+            "url": "/api/v1/screening/persons",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "type": "HIGH-VALUE",
+                    "persons": [
+                        {
+                            "id": "120.100.80.03",
+                            "name": "Dan"
+                        },
+                        {
+                            "id": "120.100.80.11",
+                            "name": "Mike"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "find_an_item_in_the_array",
+            "url": "/api/v1/screening/persons",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "type": "HIGH-VALUE",
+                    "persons.SIZE": 2,
+                    "persons[?(@.name=='Dan')].id.SIZE": 1,
+                    "persons[?(@.name=='Mike')].id.SIZE": 1,
+                    "persons[?(@.name=='Dinesh')].id.SIZE": 0
+                }
+            }
+        }
+    ]
+}

@@ -17,4 +17,10 @@ public class ScreeningServiceContractTest {
 
     }
 
+    @Test
+    @JsonTestCase("contract_tests/screeningservice/find_element_in_array_via_jsonpath.json")
+    public void testFindElementInArray() throws Exception {
+
+    }
+
 }
