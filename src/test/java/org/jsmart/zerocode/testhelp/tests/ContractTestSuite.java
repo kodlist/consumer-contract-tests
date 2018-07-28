@@ -1,5 +1,6 @@
 package org.jsmart.zerocode.testhelp.tests;
 
+import org.jsmart.zerocode.testhelp.tests.basicauth.BasicAuthContractTest;
 import org.jsmart.zerocode.testhelp.tests.corploanservice.CorpLoanServiceContractTest;
 import org.jsmart.zerocode.testhelp.tests.idchecksslservice.IdCheckServiceContractTest;
 import org.jsmart.zerocode.testhelp.tests.regulatoryservice.RegulatoryServiceContractTest;
@@ -16,7 +17,8 @@ import org.junit.runners.Suite;
         RegulatoryServiceContractTest.class,
         IdCheckServiceContractTest.class,
         CorpLoanServiceContractTest.class,
-        ScreeningServiceContractTest.class
+        ScreeningServiceContractTest.class,
+        BasicAuthContractTest.class
 })
 @RunWith(Suite.class)
 public class ContractTestSuite {
