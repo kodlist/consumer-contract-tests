@@ -1,4 +1,25 @@
-# Contract tests for interfacing APIs aka Consumer Contract Tests
+Contract tests - Interfacing APIs aka Consumer Contract Tests
+===
+Sample API testing code using [JUnit](https://github.com/junit-team/junit4) and [Zerocode](https://github.com/authorjapps/zerocode) test framework
+
+> The simple and convinient way to automate your API testing
+
+We need these two maven dependencies:
+```xml
+<dependency>
+    <groupId>org.jsmart</groupId>
+    <artifactId>zerocode-rest-bdd</artifactId>
+    <version>1.2.x</version> 
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+</dependency>
+```
 Sample Consumer Contract Tests - Corp Bank
 
 ![Sample Tests](img/contract_tests_org.png)
